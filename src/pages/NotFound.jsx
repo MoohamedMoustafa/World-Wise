@@ -1,5 +1,5 @@
-import React from 'react'
-import PageNav from '../components/PageNav/PageNav'
+import React from "react";
+import PageNav from "../components/PageNav";
 
 export default function NotFound() {
   return (
@@ -7,5 +7,5 @@ export default function NotFound() {
       <PageNav />
       Not Found!!
     </div>
-  )
+  );
 }
