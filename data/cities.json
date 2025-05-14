@@ -1,51 +1,39 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
+      "id": "96f3",
+      "cityName": "Oropesa del Mar",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "date": "2025-05-12T17:59:52.110Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
+        "lat": "40.10328591293442",
+        "lng": "0.13183593750000003"
+      }
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
-      "id": "5ac9",
-      "cityName": "Cairo",
-      "country": "Egypt",
-      "emoji": "🇪🇬",
-      "date": "2025-05-12T13:07:37.555Z",
+      "id": "d716",
+      "cityName": "Reus",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-05-12T18:00:51.413Z",
       "notes": "",
       "position": {
-        "lat": "29.826348356278118",
-        "lng": "31.354032718147725"
+        "lat": "41.1290213474951",
+        "lng": "1.1480712890625002"
+      }
+    },
+    {
+      "id": "fd66",
+      "cityName": "Teruel",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-05-12T18:01:21.757Z",
+      "notes": "",
+      "position": {
+        "lat": "40.32560799973207",
+        "lng": "-1.1206054687500002"
       }
     }
   ]
