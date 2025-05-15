@@ -1,5 +1,6 @@
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useReducer,
@@ -47,7 +48,6 @@ export default function CitiesContextProvider({ children }) {
     initialState
   );
 
-
   useEffect(() => {
     fetchCities();
   }, []);
@@ -65,23 +65,26 @@ export default function CitiesContextProvider({ children }) {
       dispatch({ type: "rejected", payload: "error in loading cities..." });
     }
   }
-  async function getCurrentCity(id) {
-    if(Number(id) === currentCity.id) return
-    dispatch({ type: "loading" });
-    try {
-      const res = await fetch(`${BASE_URL}/cities/${id}`);
-      if (res.ok) {
-        const data = await res.json();
-        dispatch({ type: "city/loaded", payload: data });
+  const getCurrentCity = useCallback(
+    async function getCurrentCity(id) {
+      if (Number(id) === currentCity.id) return;
+      dispatch({ type: "loading" });
+      try {
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        if (res.ok) {
+          const data = await res.json();
+          dispatch({ type: "city/loaded", payload: data });
+        }
+      } catch (error) {
+        console.error("error in fetchCities()", error);
+        dispatch({
+          type: "rejected",
+          payload: "there was an error in setting current city",
+        });
       }
-    } catch (error) {
-      console.error("error in fetchCities()", error);
-      dispatch({
-        type: "rejected",
-        payload: "there was an error in setting current city",
-      });
-    }
-  }
+    },
+    [currentCity.id]
+  );
 
   async function createNewCity(newCity) {
     dispatch({ type: "loading" });

@@ -1,6 +1,6 @@
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import styles from "./City.module.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useCitiesContext } from "../contexts/CitiesContext";
 import Spinner from "./Spinner";
 import BackButton from "./BackButton";
@@ -18,7 +18,7 @@ function City() {
   const { getCurrentCity, currentCity, isLoading } = useCitiesContext();
   useEffect(() => {
     getCurrentCity(id);
-  }, [id]);
+  }, [id, getCurrentCity]);
   
 
   if(isLoading) return <Spinner />
